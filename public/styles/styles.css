@@ -1,0 +1,267 @@
+/* ============================================================ */
+/* css for modal */
+/* ============================================================ */
+.profile-pic-options{
+  width: 20px;
+}
+.list-group-item {
+  line-height: 2.5;
+}
+
+ #sign-up-modal{
+   display:block;
+ }
+.map {
+  height: 250px;  
+  width: 250px;
+  margin: 10px;  
+}
+/* .profile-pic-options {
+  width: 30px
+} */
+
+/* ============================================================ */
+/* css for second-screen-design */
+/* ============================================================ */
+body{
+  background-color: whitesmoke
+}
+#profile-section {
+  /* background-color:rgb(228, 126, 31) */
+  height: 15%;
+  background-image: url("../images/background2.jpg");
+  /* background-size: cover; */
+  background-repeat: no-repeat
+}
+#username-input{
+    color:rgb(34, 54, 48)
+}
+.profile-button{
+    background-color:rgb(34, 54, 48);
+    color: rgba(245, 245, 245, 0.685)
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+#hikerPic {
+  width:30px
+}
+
+.container {
+  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#hikerHeader {
+  height: 25%;
+  width: 100%;
+  background-image: url("../images/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 5px;
+}
+
+#hikerScreen {
+  height: 70%;
+  width: 100%;
+  margin-left: 2px
+}
+
+#hikerProfile {
+  height: 100%;
+  width: 20%;
+  background-color: #3b945e;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 5px;
+}
+
+#hikerDisplay {
+  height: 100%;
+  width: 80%;
+  background-color: #3b945e;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 5px;
+}
+
+#hikerFooter {
+  height: 5%;
+  width: 100%;
+  background-color: #3b945e;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  margin-left: 2px
+}
+
+#hikerLogo {
+}
+
+#hikerName {
+  color: white;
+  font-size: 30px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#hikerPic {
+  width: 80%;
+  height: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-group button {
+  background-color: #57ba98; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+  }
+  .mountain-research{
+    text-decoration: none;
+    color: white
+  }
+  .mountain-research:hover{
+    text-decoration: none;
+    color: white
+  }
+.weather-info{
+  font-size: 50px;
+  color:#7c8e00;
+  background-color: #704b35
+}
+/* ============================================================ */
+/* css for main screen */
+/* ============================================================ */
+
+/* =============== css mountains ============================== */
+.manage-hikes-display {
+  background-color: #704b35
+}
+.mountains-hiked-title{
+  background-color:gray;
+  color:rgb(44, 44, 85);
+  font-size: 30px;
+  font-family: cursive;
+  text-align: center
+}
+.hikes{
+  background-color: rgb(44, 44, 85);
+  color: lightgrey;
+  border-color: #7c8e00;
+  border: 1px;
+  border-style: groove;
+  margin-bottom : 1px
+}
+.add-hike-header{
+  color:rgb(44, 44, 85);
+}
+.add-hike-section{
+  color:#57ba98;
+}
+.add-hike-footer{
+  color:rgb(44, 44, 85);
+}
+ .mountains-hiked-list{
+  background-color:(44, 44, 85);
+}
+.mountain-list-items{
+  background-color: gray;
+  border-color:#57ba98;
+  border:2px;
+  border-style: solid;
+  margin-bottom: 2px
+} 
+/* ============================================================ */
+.bgImgCenter{
+  background-image: url('../Project-2/images/10677.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  position: relative;;
+}
+
+.jumbotron{
+  /* background-color: #2C561B!important; */
+  height: 50!important;
+
+}
+
+.jumbotron-fluid{
+  /* background-color: #2C561B!important; */
+  height: 50!important;
+  /* background: rgba(76, 175, 80, 0.6)!important; */
+  /* background: rgba(204, 204, 204, 0.5)!important; */
+  background: none !important;
+}
+
+#backgroundimage
+{
+ height: auto;
+ left: 0;
+ margin: 0;
+ min-height: 100%;
+ min-width: 674px;
+ padding: 0;
+ position: fixed;
+ top: 0px;
+ width: 100%;
+ z-index: -1;
+}
+
+.lgtgrn {
+  color: #7c8e00;
+}
+
+.brn {
+  color: #704b35;
+}
+
+.lgtbrn {
+  color: #c06736;
+}
+
+.opa60 {
+  top: 500px;
+      background: rgba(76, 175, 80, 0.6);
+}
+
+.drkgrn {
+  color: #2C561B;
+}
+
+.lgtyellow {
+  color: #ffb700;
+}
+
+.pink {
+  color: #ee7653;
+}

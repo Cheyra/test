@@ -1,0 +1,317 @@
+<!-- second screen container -->
+<div class="container">
+
+  <!-- header row -->
+  <div id="hikerHeader">
+    <div class="row">
+      <div class="col-8">
+        <br>
+        <h1 id="username-input"></h1>
+      </div>
+      <div class="col-4">
+        <br>
+        <button class="btn-success sign-out">Sign Out</button>
+        <button id="element" href="#" class="btn-success delete-profile" style="display:inline;">Delete Profile</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 bio"></div>
+    </div>
+
+  </div>
+  <!-- end header row -->
+
+  <!-- second screen row - content area is broken in to single row with 2 columns-->
+  <div id="hikerScreen" class="row">
+
+    <!-- profile column -->
+    <div id="hikerProfile" class="col-3">
+
+      <br>
+      <!-- if the hiker is signed in we display hiker info -->
+      <img id="hikerPic" src="/images/jack.jpg" alt="Hiker Pic">
+      <br>
+
+      <!-- if the hiker is signed in we can display the My Hikes feature-->
+      <button id="myHikesBtn" class="btn-success btn-block hide myHikesBtn">My Hikes</button>
+
+      <!-- the following functions are available all the time-->
+      <button id="MapBtn" class="btn-success btn-block MapBtn">Map</button>
+      <button id="researchMapBtn" class="btn-success btn-block researchMapBtn"><a href = "https://www.outdoors.org/trip-ideas-tips-resources/plan-your-trip/nh-4000-footers" target="blank" class="mountain-research btn-group">Research My Next Hike</a></button>
+      <button id="exploreMountainsBtn" class="btn-success btn-block">Explore Mountains</button>
+      <button id="nhWeatherBtn" class="btn-success btn-block nhWeatherBtn">NH Weather Forecast</button>
+      <button id="findHikerBtn" class="btn-success btn-block find-hiker">Find a Hiker</button>
+      <br>
+      <input type="username" class="display-name-search" id="defaultForm-friend-input" class="form-control validate">
+      <br>
+
+    </div>
+    <!-- end profile column -->
+
+    <!-- main display area -->
+    <div id="hikerDisplay" class="col-9 ">
+      <!-- display mountains already hiked -->
+      <div class="row display-google-maps">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1uOqwaKQq791rvS58dFlk9QRL63x4yFUm" width="840" height="440"></iframe>
+        <!-- <img src="../public/images/TAH.JPG" alt="Mountain View"> -->
+      </div>
+      <!-- end display mountains already hiked -->
+      <!-- display google map so hiker can research mountains and hikes -->
+      <div class="row">
+      </div>
+      <!-- end display google maps -->
+      {{!-- display mountains hiked --}}
+
+
+
+      <div class="manage-hikes-display">
+        <div class="mountains-hiked-title">Hikes</div>
+      
+          
+          
+        
+        <div class="row ">
+<div class = "col-md-1"></div>
+          <table class="col-md-7 mountains-hiked">
+<tr>
+  <th class = "">Mountains</th>
+          <th class = "">Date</th>
+          <th class = "">Time taken</th>
+          <th class = "">Difficulty Level</th>
+</tr>
+
+          </table>
+          <div class="col-md-4 mountains-hiked-list"> </div>
+        </div>
+<br>
+         <br>
+        <div class="row">
+    
+         
+           <div class = "col-md-4">
+          <button id="mountain-submit" class="btn-success btn-block mountain-submit">Add a Hike</button>
+          </div>
+            <div class = "col-md-8"></div>
+          
+          {{!-- <select>
+            {{#each mtns}}
+            <option>{{mtns.Name}}</option>
+            {{/each}}
+          </select> --}}
+        </div>
+      </div>
+      <div class ="weatherStuff">
+    
+    <select class="mountain-weather-options"></select> 
+    <button class="weatherBtn btn-group"> Weather </button>
+    <br>
+    <br>
+         <div class="temp-display weather-info"></div>
+         <br>
+    <div class="weather-display weather-info"></div>
+    <br>
+    <div class="wind-display weather-info"></div>
+   
+    </div>
+
+    </div> {{!-- end display mountains hiked --}}
+
+    <!-- end main display area column -->
+    {{!-- start weather display area --}}
+  </div>
+  <!-- end second screen row -->
+
+  <!-- footer -->
+  <div id="hikerFooter" class="row">
+    A TRBL Coders Design 2019
+  </div>
+
+</div>
+<!-- end second screen container -->
+
+{{!-- delete profile modal --}}
+<div class="modal fade  " id="delete-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sign in</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete your profile?</p>
+        <div class="modal-footer">
+          <button type="button" id="confirm-delete-button" class="btn btn-primary">Yes</button>
+          <button type="submit" id="close-modal" class="btn btn-primary" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{{!-- ***************************************** --}} {{!-- add friend modal --}}
+<div class="modal fade  " id="friend-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">We found that Hiker!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <img src="" class="col-md-4 friend-pic">
+          <div class="col-md-4 friend-name"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 friend-info"></div>
+        </div>
+
+        <div class="modal-footer">
+          <p>Add a Hiker friend</p>
+          <button type="button" id="add-friend" class="btn btn-primary">Yes</button>
+          <button type="submit" id="decline" class="btn btn-primary" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{{!-- *************************************************** --}} 
+{{!-- ***************************--add a hike modal --}}
+<div class="modal fade  " id="manage-hike-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title add-hike-header">Add a Hike!</h5>
+        <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+          <span aria-hidden="true ">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ">
+        <div class=" ">
+       
+            <select class="add-hike-section mountain"></select>
+            <br>
+            <br>
+            <p class="add-hike-section ">Date:</p>
+          
+            <input type="date" class="time " id="start " name="trip-start " value="2019-01-22 " min="2017-01-01
+          " max="2019-01-22 "> 
+
+            <br>
+            <br>
+            <p class="add-hike-section "> Time taken:</p>
+            <select class="hours ">
+              <option value="0 ">0 hours</option>
+              <option value="1 ">1 hour </option>
+              <option value="2 ">2 hours </option>
+            </select>
+            <select class="minutes ">
+              <option value="0 ">0 minutes</option>
+              <option value="1 ">1 minute</option>
+              <option value="2 ">2 minutes</option>
+            </select>
+
+
+            <br>
+            <br>
+            <p class="add-hike-section ">Difficulty Level: </p>
+            <select class="rank ">
+              <option value="1 ">1 (1 being easy and 5 being hard)</option>
+              <option value="2 ">2 (1 being easy and 5 being hard)</option>
+              <option value="3 ">3 (1 being easy and 5 being hard)</option>
+              <option value="4 ">4 (1 being easy and 5 being hard)</option>
+              <option value="5 ">5 (1 being easy and 5 being hard)</option>
+            </select>
+                   </div>
+
+        <div class="modal-footer ">
+          <p class="add-hike-footer ">Click submit to add mountain</p>
+          <div> </div>
+
+
+          <button type="button " id= "add-hike" class="btn btn-primary add-hike">Submit</button>
+
+
+          <button type="submit " id="decline " class="btn btn-primary close-hikes " data-dismiss="modal ">Close</button>
+
+
+            <!-- display sign in or sign out button -->
+            <!-- we will unhide whichever button is relevent to the hiker -->
+            {{!-- <br>
+            <!-- if the hiker is signed in we display hiker info -->
+            <p id="username-input"></p>
+            <img id="hikerPic" src="/images/jack.jpg" alt="Hiker Pic">
+            <br>
+            <!-- if the hiker is signed in we unhide the sign out button and display hiker info -->
+            <button id="signOutBtn" class="btn-success btn-block hide">Sign Out</button>
+
+            <!-- if the hiker is signed in we can display the My Hikes feature-->
+            <button id="myHikesBtn" class="btn-success btn-block hide">My Hikes</button>
+
+            <!-- the following functions are available all the time-->
+            <button id="researchMapBtn" class="btn-success btn-block">Research My Next Hike</button>
+            <button id="exploreMountainsBtn" class="btn-success btn-block">Explore Mountains</button>
+            <button id="reviewBlogsBtn" class="btn-success btn-block">Review Blog</button>
+            <button id="nhWeatherBtn" class="btn-success btn-block">NH Weather Forecast</button>
+
+        </div> <!-- end profile column -->
+
+        <!-- main display area -->
+        <div id="hikerDisplay" class="col-9">
+            <!-- display mountains already hiked -->
+            <div class="row">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1uOqwaKQq791rvS58dFlk9QRL63x4yFUm" width="840"
+                    height="440"></iframe>
+                <!-- <img src="../public/images/TAH.JPG" alt="Mountain View"> -->
+            </div> <!-- end display mountains already hiked -->
+            <!-- display google map so hiker can research mountains and hikes -->
+            <div class="row">
+            </div> <!-- end display googke maps -->
+        </div> <!-- end main display area column --> --}}
+
+    </div> <!-- end second screen row -->
+
+    {{!-- Select for the mountain you have hiked, hit submit, and it posts --}}
+    {{!-- <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Select your mountains</h1>
+    <p class="lead">Select the Mountain you have hiked and hit submit to record it</p>
+          <div>
+      <select>
+       {{#each mtns}}
+         <option id="mountain-hiked">{{this.Name}}</option>
+       {{/each}}
+      </select>
+    </div>
+    <button type="button" id="submit-hike" class="btn btn-lg btn-success" >Submit Hike!</button>
+  </div>
+</div> --}}
+   
+
+  </div>
+</div>
+</div>
+</div>
+{{!-- *************************************************** --}}
+
+    <!-- footer -->
+    <div id="hikerFooter" class="row">
+        A TRBL Coders Design 2019
+
+    </div>
+
+</div>
+<!-- end container -->
+
+<!-- comment why we load this when we do... -->
+<script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+<script src="/js/index.js "></script>
+<script src="/js/profile.js "></script>
+<script src="/js/weather.js "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy "
+  crossorigin="anonymous "></script>
